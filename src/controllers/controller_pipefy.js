@@ -11,7 +11,7 @@ export async function createRecord (req, res) {
     console.log("Quantidade2: ",Quantidade2)
     console.log("Produto_3: ", Produto_3)
     console.log("Quantidade3: ", Quantidade3) */
-    console.log(req.body)
+    console.log("Body Requisição: ",req.body)
     try {
         const etiquetaId = "308171892"
         const produtos = {
