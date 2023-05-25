@@ -5,7 +5,7 @@ dotenv.config();
 
 export async function createAndSearchEmpresa(name, empresa, celular, email, estado, cidade, maxWaitTime) {
     const startTime = Date.now();
-    const empresaNome = empresa.toUpperCase()
+    const empresaNome = empresa
     
 
     let company = await searchCardEmpresa(celular);
