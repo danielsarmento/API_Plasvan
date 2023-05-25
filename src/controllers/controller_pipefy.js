@@ -41,7 +41,7 @@ export async function createRecord (req, res) {
           let Q6 = produtos["Termo encolhível"]
           let Q7 = produtos["Tampa 20L COM vedante"]
           //console.log("Números: ", Q1, Q2, Q3, Q4, Q5, Q6, Q7)
-          const newName = name.toUpperCase()
+          const newName = name
         const record = await createRecordTable(newName, Email, Empresa, Estado,Cidade,Telefone,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Mensagem) // ok
         //console.log('Record Id: ', record)
 
