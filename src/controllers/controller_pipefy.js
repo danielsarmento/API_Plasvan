@@ -5,13 +5,10 @@ import {createCardOportunidade} from '../services/CreateCardOportunidade.js'
 export async function createRecord (req, res) {
     const {name, Empresa, Estado, Cidade, Email, Telefone, Produtos, Quantidade1, Produto_2, Quantidade2, Produto_3, Quantidade3, Mensagem} = req.body
     //As verificações serão feitas no front-end, por isso não será feito aqui.
-    /* console.log("name: ", name)
-    console.log("Empresa: ",Empresa)
-    console.log("Produto_2: ", Produto_2)
-    console.log("Quantidade2: ",Quantidade2)
-    console.log("Produto_3: ", Produto_3)
-    console.log("Quantidade3: ", Quantidade3) */
     console.log("Body Requisição: ",req.body)
+    if(!req.body){
+      return res.status(500).json({mensagem: "Corpo da requisição é requerido!"})
+    }
     try {
         const etiquetaId = "308171892"
         const produtos = {
